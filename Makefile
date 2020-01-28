@@ -4,7 +4,7 @@ CPPFLAGS=-g -Wall -std=c++11
 LDFLAGS=./lib/libgtest.a -lpthread
 
 OBJS=src/main.o \
-	src/gtest_base.o \
+	src/BaseTest.o \
 	src/DeathTest.o \
 	src/ExceptionTest.o \
 	src/TestFixture.o

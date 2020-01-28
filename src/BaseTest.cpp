@@ -21,16 +21,16 @@
     前缀改为 ASSERT
 */
 
-TEST(test, hello) {
+TEST(test_BaseTest, hello) {
     std::cout << "[DEBUG] Hello google test\n";
 }
 
-TEST(test, ASSERT) {
+TEST(test_BaseTest, ASSERT) {
     ASSERT_TRUE(100 > 90) << "Assert failed!!!!!";  // 失败才会输出
     // assert 失败，终止function执行
 }
 
-TEST(test, EXPECT) {
+TEST(test_BaseTest, EXPECT) {
     EXPECT_GT(100, 90) << "Expect failed!!!!!";
     // expect 失败，仍会继续function执行
 
