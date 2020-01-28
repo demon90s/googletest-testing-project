@@ -3,10 +3,11 @@ INCLUDE=./include
 CPPFLAGS=-g -Wall -std=c++11
 LDFLAGS=./lib/libgtest.a -lpthread
 
-OBJS=main.o \
-	gtest_base.o \
-	DeathTest.o \
-	ExceptionTest.o
+OBJS=src/main.o \
+	src/gtest_base.o \
+	src/DeathTest.o \
+	src/ExceptionTest.o \
+	src/TestFixture.o
 
 all: main
 
@@ -17,4 +18,4 @@ main: $(OBJS)
 	$(CC) -I$(INCLUDE) $(CPPFLAGS) -c $< -o $@
 
 clean:
-	-rm -f main *.o
+	-rm -f main src/*.o
